@@ -7,10 +7,10 @@ already in this folder.
 
 Done: the repository is live at https://github.com/VividhDesign/pramaan, with CI running on every push.
 
-1. **(you) Turn on the free website.** Settings → Pages → Source: **GitHub Actions**. Then re-run the
-   `Deploy site` workflow (Actions tab → Deploy site → Re-run). It publishes
-   **https://vividhdesign.github.io/pramaan/** and refreshes the judgment index every Monday. This is
-   the in-browser version: documents never leave the user's computer, and hosting costs nothing.
+1. **Done: the website is live** at **https://vividhdesign.github.io/pramaan/**. It is the in-browser
+   version: documents never leave the user's computer, and hosting costs nothing. The `Deploy site`
+   workflow rebuilds it on every push to `main` and every Monday, publishing to the `gh-pages`
+   branch, so new judgments appear automatically.
 2. **(you) PyPI, one time.** On pypi.org → Account → Publishing → add a pending publisher:
    project `pramaan`, owner `VividhDesign`, repo `pramaan`, workflow `release.yml`, environment `pypi`.
    Then:

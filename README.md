@@ -138,7 +138,7 @@ fabrications follow the Supreme Court's own taxonomy in 2026 INSC 668:
 
 * **Private web version (free).** `python web/build_site.py --db <index> --out site` builds a static
   site that runs the checker in the browser with Pyodide: a ~7 MB download, and the document stays on
-  the user's machine. `.github/workflows/pages.yml` deploys it to GitHub Pages and refreshes the index
+  the user's machine. `.github/workflows/pages.yml` publishes it to the `gh-pages` branch (served by GitHub Pages) and refreshes the index
   weekly.
 * **Server and paid API.** `docker build -t pramaan .`, then run it with
   `-e PRAMAAN_API_KEYS="clientA:5000,clientB:500"` (keys with daily limits). `POST /api/check` takes
