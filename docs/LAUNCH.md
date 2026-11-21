@@ -3,29 +3,15 @@
 Everything here is ready to copy. Steps marked **(you)** need your accounts; everything else is
 already in this folder.
 
-## Day 1: put it online (about 15 minutes)
+## Day 1: put it online
 
-Shortest path: open
-[this prefilled link](https://github.com/new?name=pramaan&visibility=public&description=Catch+fake+case+citations+in+Indian+legal+documents.+Free%2C+open-source%2C+private.)
-and click **Create repository**. Then run `bash pramaan/scripts/publish.sh` from your profile repo
-(branch `claude/wonderful-euler-sq9rg0`). It pushes the project with its history, tags v0.1.0, and
-prints the remaining clicks. The detailed steps follow.
+Done: the repository is live at https://github.com/VividhDesign/pramaan, with CI running on every push.
 
-1. **(you) Create the repository.** On GitHub, create an empty public repository `VividhDesign/pramaan`
-   (no README, no licence; this folder has both).
-2. **(you) Push this folder as its own repository, history included.** From a clone of your profile
-   repo, on branch `claude/wonderful-euler-sq9rg0`:
-
-   ```bash
-   git subtree split --prefix pramaan -b pramaan-standalone
-   git push https://github.com/VividhDesign/pramaan.git pramaan-standalone:main
-   ```
-
-3. **(you) Turn on the free website.** In the new repo: Settings → Pages → Source: **GitHub Actions**.
-   The `Deploy site` workflow then publishes **https://vividhdesign.github.io/pramaan/** and refreshes
-   the judgment index every Monday. It is the in-browser version: documents never leave the user's
-   computer, and hosting costs nothing.
-4. **(you) PyPI, one time.** On pypi.org → Account → Publishing → add a pending publisher:
+1. **(you) Turn on the free website.** Settings → Pages → Source: **GitHub Actions**. Then re-run the
+   `Deploy site` workflow (Actions tab → Deploy site → Re-run). It publishes
+   **https://vividhdesign.github.io/pramaan/** and refreshes the judgment index every Monday. This is
+   the in-browser version: documents never leave the user's computer, and hosting costs nothing.
+2. **(you) PyPI, one time.** On pypi.org → Account → Publishing → add a pending publisher:
    project `pramaan`, owner `VividhDesign`, repo `pramaan`, workflow `release.yml`, environment `pypi`.
    Then:
 
@@ -35,11 +21,10 @@ prints the remaining clicks. The detailed steps follow.
    ```
 
    After that, `pip install pramaan` works for everyone.
-5. **(you) Repo polish.**
-   * Add a description: "Catch fake case citations in Indian legal documents. Free, open-source, private."
-   * Add topics: `legal-tech india hallucination citations supreme-court nlp`.
-   * Add the website link.
-6. **(you) Merge the branch** so your profile README lists Pramaan first.
+3. **(you) Repo details.** Click the gear next to "About" on the repo page:
+   * description: "Catch fake case citations in Indian legal documents. Free, open-source, private.";
+   * website: https://vividhdesign.github.io/pramaan/;
+   * topics: `legal-tech india hallucination citations supreme-court nlp`.
 
 ## Week 1: get it seen
 
