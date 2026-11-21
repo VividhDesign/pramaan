@@ -11,7 +11,9 @@ Done: the repository is live at https://github.com/VividhDesign/pramaan, with CI
    version: documents never leave the user's computer, and hosting costs nothing. The `Deploy site`
    workflow rebuilds it on every push to `main` and every Monday, publishing to the `gh-pages`
    branch, so new judgments appear automatically.
-2. **(you) PyPI, one time.** On pypi.org → Account → Publishing → add a pending publisher:
+2. **(optional) PyPI.** Anyone can already install with
+   `pip install "pramaan[sync,pdf] @ git+https://github.com/VividhDesign/pramaan"`. A PyPI listing just
+   makes it `pip install pramaan`. One-time setup: on pypi.org → Account → Publishing → add a pending publisher:
    project `pramaan`, owner `VividhDesign`, repo `pramaan`, workflow `release.yml`, environment `pypi`.
    Then:
 

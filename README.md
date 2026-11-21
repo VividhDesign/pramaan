@@ -15,8 +15,7 @@ It is free and open-source, and it needs no SCC Online or Manupatra subscription
 * **On the command line**, offline once the index is built:
 
 ```bash
-git clone https://github.com/VividhDesign/pramaan && cd pramaan
-pip install -e ".[sync,pdf]"      # PyPI release coming: pip install pramaan
+pip install "pramaan[sync,pdf] @ git+https://github.com/VividhDesign/pramaan"
 pramaan sync                      # ~2 min: downloads open Supreme Court metadata, builds the index
 pramaan check petition.pdf        # also .docx, .txt, or - for stdin; exits 1 if anything is high-risk
 pramaan serve                     # web interface at http://127.0.0.1:8000
